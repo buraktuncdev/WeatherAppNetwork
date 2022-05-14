@@ -24,7 +24,7 @@ public struct APIPaths {
     ///   - latitude: a geographic coordinate that specifies a degree measured north and south from Equator
     ///   - longitude: a geographic coordinate that specifies ia degree measured east and west fromfrom the great circle passing through Greenwich
     /// - Returns: A String value of the forecast url
-    func createForecastURL(apiKey: String, latitude: Double, longitude: Double) -> String {
+    public func createForecastURL(apiKey: String, latitude: Double, longitude: Double) -> String {
         return "\(baseURLString)/\(APIConstants.forecastPath)/\(apiKey)/\(latitude),\(longitude)"
     }
 }
