@@ -10,6 +10,8 @@ import Foundation
 /// A class to set HTTP URL configurations that we need for our application
 public class APIHelper {
 
+    public init() {}
+
     /// This function provides setting query parameters whenever its needed
     /// - Parameters:
     ///   - parameters: query parameters are a defined set of parameters attached to the end of a URL. They help define specific content or actions based on the data being passed.

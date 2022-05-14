@@ -10,6 +10,8 @@ import Foundation
 /// A network manager class that provides communication between application and server
 public final class APIManager {
 
+    public init() {}
+
     /// Generic Network Request function
     /// - Parameters:
     ///   - urlRequest: It represents information about the network request. Should be passed from service layer of the application
