@@ -18,7 +18,6 @@ public final class APIManager {
     ///   - completion: Completion handler to get response from the API. Result type can be a data model or APIError
     public func callAPI<T: Codable>(urlRequest: URLRequest,
                              requestBody: Data?,
-                             httpHeaders: [String:Any]?,
                              completion: @escaping (Result<T, APIError>) -> Void) {
 
         let session = URLSession(configuration: .default)
