@@ -33,8 +33,8 @@ public final class APIManager {
                 return
             }
 
-            guard let error = error else {
-                Logger.shared.log(.error, error?.localizedDescription)
+            if let error = error {
+                Logger.shared.log(.error, error.localizedDescription)
                 completion(.failure(.transportationError(requestURL: requestURL)))
                 return
             }
