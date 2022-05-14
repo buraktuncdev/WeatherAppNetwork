@@ -33,7 +33,7 @@ public class APIHelper {
     /// - Returns: A URL load request that is independent of protocol or URL scheme.
     public func setRequestHeaders(request: inout URLRequest, headers:[String:String]) -> URLRequest {
         headers.forEach { header in
-            request.setValue(header.key, forHTTPHeaderField: header.value)
+            request.setValue(header.value, forHTTPHeaderField: header.key)
         }
         return request
     }
