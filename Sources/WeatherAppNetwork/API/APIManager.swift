@@ -16,7 +16,7 @@ public final class APIManager {
     ///   - requestBody: This parameter provides creating request body if needed
     ///   - httpHeaders: Any specific HTTP headers can be set from service layer of the application
     ///   - completion: Completion handler to get response from the API. Result type can be a data model or APIError
-    func callAPI<T: Codable>(urlRequest: URLRequest,
+    public func callAPI<T: Codable>(urlRequest: URLRequest,
                              requestBody: Data?,
                              httpHeaders: [String:Any]?,
                              completion: @escaping (Result<T, APIError>) -> Void) {
