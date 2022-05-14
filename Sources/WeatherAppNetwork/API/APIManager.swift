@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WeatherAppLogger
 
 /// A network manager class that provides communication between application and server
 public final class APIManager {
@@ -32,7 +33,8 @@ public final class APIManager {
                 return
             }
 
-            guard let _ = error else {
+            guard let error = error else {
+                Logger.shared.log(.error, error?.localizedDescription)
                 completion(.failure(.transportationError(requestURL: requestURL)))
                 return
             }
@@ -67,12 +69,14 @@ public final class APIManager {
             }
 
             guard let data = data else {
+                Logger.shared.log(.error, "No Data from Service")
                 completion(.failure(.noData))
                 return
             }
 
             do {
                 let responseObject = try JSONDecoder().decode(T.self, from: data)
+                Logger.shared.log(.success, "Network Request successfully returned the data")
                 completion(.success(responseObject))
             } catch {
                 completion(.failure(.decodingFailure))
