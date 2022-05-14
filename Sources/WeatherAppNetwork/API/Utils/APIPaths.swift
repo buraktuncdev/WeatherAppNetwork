@@ -18,6 +18,8 @@ public let baseURLString = environment.getBaseURLString()
 /// This class provides creating our specific URLs as string to make the network request
 public class APIPaths {
 
+    public init() {}
+
     /// Creating forecast URL to make network request and get the data from API
     /// - Parameters:
     ///   - apiKey: specific api key for unique customers of the API
