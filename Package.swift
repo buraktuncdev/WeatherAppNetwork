@@ -22,10 +22,13 @@ let package = Package(
             name: "WeatherAppNetwork",
             dependencies: [],
             path: "Sources",
-            resources: [
-                .process("Resources/Media.xcassets")]),
+            resources: [.process("Resources/Media.xcassets")],
+            swiftSettings: [.define("ENABLE_TESTABILITY=YES", .when(configuration: .debug))]),
         .testTarget(
             name: "WeatherAppNetworkTests",
-            dependencies: ["WeatherAppNetwork"]),
+            dependencies: ["WeatherAppNetwork"],
+            path: "Tests",
+            resources: [.process("WeatherAppNetworkTests/Resources/Weather.json")]
+        ),
     ]
 )
