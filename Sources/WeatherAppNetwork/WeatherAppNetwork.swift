@@ -1,6 +1,0 @@
-public struct WeatherAppNetwork {
-    public private(set) var text = "Hello, World!"
-
-    public init() {
-    }
-}

@@ -21,7 +21,9 @@ let package = Package(
         .target(
             name: "WeatherAppNetwork",
             dependencies: [],
-            path: "Sources"),
+            path: "Sources",
+            resources: [
+                .process("Resources/Media.xcassets")]),
         .testTarget(
             name: "WeatherAppNetworkTests",
             dependencies: ["WeatherAppNetwork"]),
