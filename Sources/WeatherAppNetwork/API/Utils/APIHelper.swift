@@ -8,7 +8,7 @@
 import Foundation
 
 /// A class to set HTTP URL configurations that we need for our application
-public struct APIHelper {
+public class APIHelper {
 
     /// This function provides setting query parameters whenever its needed
     /// - Parameters:

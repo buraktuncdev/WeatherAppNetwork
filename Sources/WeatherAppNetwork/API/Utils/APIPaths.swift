@@ -15,8 +15,8 @@ let environment = APIEnvironment.production
 
 public let baseURLString = environment.getBaseURLString()
 
-/// This Struct provides creating our specific URLs as string to make the network request
-public struct APIPaths {
+/// This class provides creating our specific URLs as string to make the network request
+public class APIPaths {
 
     /// Creating forecast URL to make network request and get the data from API
     /// - Parameters:
