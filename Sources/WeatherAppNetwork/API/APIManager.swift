@@ -78,9 +78,8 @@ public final class APIManager {
                 let responseObject = try JSONDecoder().decode(T.self, from: data)
                 Logger.shared.log(.success, "Network Request successfully returned the data")
                 completion(.success(responseObject))
-            } catch let DecodingError.typeMismatch(type, context) {
-                Logger.shared.log(.error, "Type '\(type)' mismatch:", context.debugDescription)
-                Logger.shared.log(.error, "codingPath:", context.codingPath)
+            } catch let error {
+                Logger.shared.log(.error, "Decoding Error Details: \(error.localizedDescription)")
                 completion(.failure(.decodingFailure))
             }
         }.resume()
